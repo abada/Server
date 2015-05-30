@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	h1= title
+	form#formAddUser(name="adduser",method="post",action="/adduser")
+		input#inputUserName(type="text", placeholder="username", name="username")
+		input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
+		button#btnSubmit(type="submit") submit
+	br
+	br
+	form#formDelUser(name="deluser",method="post",action="/deluser")
+		input#inputDelName(type="text", placeholder="delname", name="delname")
+		button#btnSubmit(type="submit") delete
+	br
+	br
+	form#formAddJson(name="addjson", method="post", action="addjson")
+		textarea#textArea(placeholder="json", name="json")
+		button#btnSubmit(type="submit") add to database
+
+
