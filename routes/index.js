@@ -61,7 +61,7 @@ router.put('/', function(req, res) {
 	var jsonfile = req.body;
 
 	// to accept text:
-	var jsonfile = JSON.parse(jsonfile);
+	//var jsonfile = JSON.parse(jsonfile);
 
 	// to turn it into readable stuff: 
 	// var jsonfile = MakeSurveyReadable(jsonfile);
