@@ -1,6 +1,7 @@
 /* General Necessities */
 var express = require('express');
 var router = express.Router();
+var Type = require('type-of-is');
 
 /* 
 ---------------------
@@ -52,23 +53,28 @@ THE OCEAN CLEANUP APP
 	return survey;
 }; */
 
-
 /* Here we go! Catch put request and store it. */
-router.put('/addjson', function(req, res) {
+router.put('/', function(req, res) {
 	var db = req.db;
 	var collection = db.get('usercollection');
 
+	console.log("\nThis is the req.body we're gonna save:");
+	console.log("Type:", Type.string(req.body));
+	console.log(req.body);
 	var jsonfile = req.body;
+
+	// to accept text:
+	var jsonfile = JSON.parse(jsonfile);
+
+	// to turn it into readable stuff: 
 	// var jsonfile = MaakSurveyLeesbaar(jsonfile);
 
 	console.log("-----\nReceived Survey:");
-	console.log(req);
-	console.log("--");
 	console.log(jsonfile);
 
 	collection.insert(jsonfile, function (err, doc) {
 		if(err) {
-			res.send({"received":false,"message":"Stuff went wrong. Try again?"});
+			res.send({"received":false,"message":"Stuff went wrong. Sorry! Try again?"});
 		}else{
 			res.send({"received":true,"message":"We received your survey. Thanks!"});
 		};
