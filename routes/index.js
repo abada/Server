@@ -3,13 +3,9 @@ var express = require('express');
 var router = express.Router();
 var Type = require('type-of-is');
 
-/* 
----------------------
-THE OCEAN CLEANUP APP
----------------------
+/*
 
-/* Main function we call */
-/*function MaakSurveyLeesbaar(survey){
+function MakeSurveyReadable(survey){
 	// the variables
 	var windspeeds = ["0 - 1 knots","2 - 3 knots","4 - 6 knots","7 - 10 knots",
 					"11 - 16 knots","17 - 21 knots","22 - 27 knots","28+ knots"];
@@ -51,15 +47,16 @@ THE OCEAN CLEANUP APP
 		};
 	};
 	return survey;
-}; */
+};
+
+*/
 
 /* Here we go! Catch put request and store it. */
 router.put('/', function(req, res) {
 	var db = req.db;
-	var collection = db.get('usercollection');
+	var collection = db.get('surveys');
 
-	console.log("\nThis is the req.body we're gonna save:");
-	console.log("Type:", Type.string(req.body));
+	console.log("--------\nJust received this req.body as type:", Type.string(req.body));
 	console.log(req.body);
 	var jsonfile = req.body;
 
@@ -67,9 +64,9 @@ router.put('/', function(req, res) {
 	var jsonfile = JSON.parse(jsonfile);
 
 	// to turn it into readable stuff: 
-	// var jsonfile = MaakSurveyLeesbaar(jsonfile);
+	// var jsonfile = MakeSurveyReadable(jsonfile);
 
-	console.log("-----\nReceived Survey:");
+	console.log("\nAnd we're gonna save it like this:");
 	console.log(jsonfile);
 
 	collection.insert(jsonfile, function (err, doc) {
