@@ -1,0 +1,79 @@
+### Windspeed
+0	0 - 1 knots
+1	2 - 3 knots
+2	4 - 6 knots
+3	7 - 10 knots
+4	11 - 16 knots
+5	17 - 21 knots
+6	22 - 27 knots
+7	28+ knots
+
+### CloudCover
+0	0%
+1	25%
+2	50%
+3	75%
+4	100%
+
+### Type
+0	1 pieces of debris
+1	2 - 5 pieces of debris
+2	6 - 10 pieces of debris
+3	11 - 10 pieces of debris
+4	100+ pieces of debris
+
+### Material -> Category
+
+0	plastic
+	0	fragment
+	1	buoy/float
+	2	rope/line
+	3	net
+	4	bottle
+	5	jug/bucket
+	6	crate
+	7	other
+	8	bag
+	9	no clue
+1	foam
+	0	fragment
+	1	buoy/float
+	2	cup
+	3	flip-flop
+	4	crate
+	5	other
+	9	no clue
+2	glass
+	0	buoy
+	1	bottle
+	2	light bulb
+	3	other
+	9	no clue
+3	metal
+	0	drum
+	1	spray can
+	2	other
+	9	no clue
+4	wood
+	0	log
+	1	crate
+	2	lumber
+	3	other
+	4	pallet
+	9	no clue
+5	other
+	0	other
+6	no clue
+	9	no clue
+
+### Dimensions
+0	0 - 10 cm
+1	10 - 100 cm
+2	1 - 10 m
+3	10+ m
+
+### Distances
+0	0 - 10 m
+1	10 - 50 m
+2	50 - 100 m
+3	100+ m
