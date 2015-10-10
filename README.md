@@ -2,24 +2,23 @@
 
 Backend API for [The Ocean Cleanup Survey App](https://github.com/TheOceanCleanup/App)
 
-## Remove 'Fake' Surveys
-
-`db.surveys.remove({ events: { $elemMatch: { 'data.comment' : /*[FAKE SURVEY]*/}}})`
-
 ## Getting Started
 
 ### Installation
 
-- Make sure that you have Node and NPM
-- Install all npm modules `npm install`
+Make sure that you have Node and NPM and install all npm modules using `npm install`.
 
 ### Start
 
-`node app`
+Run the following `npm start`
 
 ## Helping out
 
 Want to help out? Great! Feel free to test the API, post issues/suggestions/improvements or help out and fix some of the outstanding issues/improvements.
+
+### Remove 'Fake' Surveys
+
+`db.surveys.remove({ events: { $elemMatch: { 'data.comment' : /*[FAKE SURVEY]*/}}})`
 
 ## Conversion
 
