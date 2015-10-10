@@ -26,34 +26,37 @@ Want to help out? Great! Feel free to test the API, post issues/suggestions/impr
 The data collected in the app is send over as integers, this is the conversion table.
 
 #### Windspeed
-|# | Description      |
-|--|------------------|
-|0 |  0 - 1 knots     |
-|1 |  2 - 3 knots     |
-|2 |  4 - 6 knots     |
-|3 |  7 - 10 knots    |
-|4 |  11 - 16 knots   |
-|5 |  17 - 21 knots   |
-|6 |  22 - 27 knots   |
-|7 |  28+ knots       |
+
+|#   | Description              |
+|----|--------------------------|
+|0   |  0 - 1 knots             |
+|1   |  2 - 3 knots             |
+|2   |  4 - 6 knots             |
+|3   |  7 - 10 knots            |
+|4   |  11 - 16 knots           |
+|5   |  17 - 21 knots           |
+|6   |  22 - 27 knots           |
+|7   |  28+ knots               |
 
 #### CloudCover
-|# | Description|
-|--|------------|
-|0 |  0%        |
-|1 |  25%       |
-|2 |  50%       |
-|3 |  75%       |
-|4 |  100%      |
+
+|#   | Description              |
+|----|--------------------------|
+|0   |  0%                      |
+|1   |  25%                     |
+|2   |  50%                     |
+|3   |  75%                     |
+|4   |  100%                    |
 
 #### Type
-| #| Description                |
-|--|----------------------------|
-|0 |  1 pieces of debris        |
-|1 |  2 - 5 pieces of debris    |
-|2 |  6 - 10 pieces of debris   |
-|3 |  11 - 10 pieces of debris  |
-|4 |  100+ pieces of debris     |
+
+|#   | Description              |
+|----|--------------------------|
+|0   |  1 pieces of debris      |
+|1   |  2 - 5 pieces of debris  |
+|2   |  6 - 10 pieces of debris |
+|3   |  11 - 10 pieces of debris|
+|4   |  100+ pieces of debris   |
 
 #### Material -> Category
 |#   | Description           |
@@ -119,19 +122,19 @@ The data collected in the app is send over as integers, this is the conversion t
 |6.9 | no clue               |
 
 #### Dimensions
-|# | Description             |
-|--|-------------------------|
-|0 |  0 - 10 cm              |
-|1 |  10 - 100 cm            |
-|2 |  1 - 10 m               |
-|3 |  10+ m                  |
+|#   | Description             |
+|----|-------------------------|
+|0   |  0 - 10 cm              |
+|1   |  10 - 100 cm            |
+|2   |  1 - 10 m               |
+|3   |  10+ m                  |
 
 #### Distances
-|# | Description             |
-|--|-------------------------|
-|0 |  0 - 10 m               |
-|1 |  10 - 50 m              |
-|2 |  50 - 100 m             |
-|3 |  100+ m                 |
+|#   | Description             |
+|----|-------------------------|
+|0   |  0 - 10 m               |
+|1   |  10 - 50 m              |
+|2   |  50 - 100 m             |
+|3   |  100+ m                 |
 
 And yes any of these items can sadly be found in the ocean.
