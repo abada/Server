@@ -5,14 +5,13 @@ var bodyParser = require('body-parser');
 
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/nodetest1');
-
+var db = monk('localhost:27017/survey');
 var app = express();
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.text()); // https://github.com/expressjs/body-parser#bodyparsertextoptions
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.text());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Make our db accessible to our router
 app.use(function(req, res, next) {
@@ -20,6 +19,7 @@ app.use(function(req, res, next) {
   next();
 });
 
+// Routes
 app.use('/', require('./routes/index'));
 app.use('/api', require('./routes/api'));
 
